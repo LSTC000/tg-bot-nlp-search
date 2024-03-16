@@ -1,0 +1,23 @@
+version: "3.8"
+
+volumes:
+  postgres-data:
+  redis-data:
+
+networks:
+  net:
+
+services:
+  redis:
+    container_name: redis-nlp-search
+    image: redis/redis-stack:6.2.6-v9
+    env_file:
+      - ../.env
+    volumes:
+      - redis-data:/data
+    restart: on-failure
+    ports:
+      - "6377:6379"
+      - "8010:8001"
+    networks:
+      - net
