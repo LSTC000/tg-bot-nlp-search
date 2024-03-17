@@ -81,7 +81,9 @@ class NLPUseCase(CoreUseCase):
             text=self._nlp_searching_msg,
         )
 
-        nlp_search_response = await self.services.nlp.nlp_search_response(query=message.text)
+        nlp_search_response = await self.services.nlp.nlp_search_response(
+            query=message.text
+        )
         await self._bot.send_message(
             chat_id=user_id,
             text=nlp_search_response.response,
