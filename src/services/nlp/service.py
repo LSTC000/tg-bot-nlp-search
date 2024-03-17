@@ -14,5 +14,5 @@ class NLPService(CoreService):
 
     @staticmethod
     @cache(**CacheManager.service(expire=settings.cache.NLP_SEARCH_EXPIRE_SECONDS))
-    async def nlp_search_response(query) -> schemas.NLPSearch:
+    async def nlp_search_response(query: str) -> schemas.NLPSearch:
         return schemas.NLPSearch(response=NLPSearch.response(query))
