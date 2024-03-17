@@ -1,10 +1,7 @@
 ![Python](https://img.shields.io/badge/Python-3.12-_)
-![FastApi](https://img.shields.io/badge/Aiogram-3-blue)
+![Aiogram3](https://img.shields.io/badge/Aiogram-3-blue)
 ![Redis](https://img.shields.io/badge/Redis-6.2--alpine-red)
-![Alembic](https://img.shields.io/badge/Alembic-1.13.1-red)
-![SqlAlchemy](https://img.shields.io/badge/SqlAlchemy-2.0.25-red)
 ![Pydantic](https://img.shields.io/badge/Pydantic-2.5.3-yellow)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)
 ![Docker](https://img.shields.io/badge/Docker-24.0.6-blue)
 
 
@@ -45,11 +42,11 @@
         - /db - Настройки баз даннных
         - /settings
             - /settings.py - Основные настройки
-    * /crud - БД репозиторий
     * /deps - Зависимости
     * /filters - Фильтры
     * /keyboards - Клавиатуры
-    * /middlewares - Логика прослойки между событием и сервером
+    * /loader - Загрузка сущность бота
+    * /nlp - Логика NLP модуля
     * /models - ORM модели для SQLAlchemy
     * /routers - Обработчики событий
     * /schemas - Pydantic модели
